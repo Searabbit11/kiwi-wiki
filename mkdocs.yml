@@ -1,1 +1,42 @@
-site_name: 키위 위키
+site_name: Kiwi Wiki
+theme:
+  name: material
+  language: ko
+
+  palette:
+    # 라이트 모드 설정
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로 전환
+
+    # 다크 모드 설정
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로 전환
+  features:
+    - navigation.tabs
+    - navigation.top
+  font:
+    text: Noto Sans KR
+    code: Fira Code
+
+
+markdown_extensions:
+  - pymdownx.details
+  - attr_list
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+nav:
+  - 홈: index.md
+  - 게임목록: gameinformation.md
+  - 사용기술: description.md

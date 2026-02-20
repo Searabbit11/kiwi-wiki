@@ -1,17 +1,18 @@
-# Welcome to MkDocs
+# 🥝 Kiwi Wiki: 게임 프로젝트 위키
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+환영합니다! 이 사이트는 제가 개발한 **두 가지 게임 프로젝트**와 그 과정에서 사용된 **기술 스택**을 소개하는 공간입니다.
 
-## Commands
+## 🎮 소개할 게임 목록
+현재 다음 두 가지 프로젝트가 등록되어 있습니다.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+*   **AlloutFPS**: 격렬한 액션을 담은 1인칭 슈팅 게임
+*   **[두 번째 게임 이름]**: (정보를 입력해 주세요!)
 
-## Project layout
+## 🛠️ 주요 사용 기술
+각 프로젝트는 다양한 최신 기술을 활용하여 제작되었습니다.
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+*   **게임 엔진**: Unity, Unreal Engine 등
+*   **프로그래밍 언어**: C#, C++, Python 등
+*   **그래픽 및 도구**: Blender, Adobe Suite 등
+
+자세한 내용은 상단 메뉴의 **게임목록**과 **사용기술** 탭에서 확인하실 수 있습니다.

@@ -1,0 +1,116 @@
+/* --- 라이트 모드 기본 스타일 --- */
+.md-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+h1 {
+    border-bottom: 2px solid #00a495;
+    padding-bottom: 5px;
+    margin-top: 2rem !important;
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 3px;
+    margin-top: 1.5rem !important;
+}
+
+table.infobox {
+    float: right;
+    width: 300px;
+    margin-left: 20px;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+table.infobox th {
+    background-color: #00a495;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+table.infobox td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+table.infobox .label {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    width: 30%;
+}
+
+details {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+details summary {
+    background-color: #f1f3f5;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- 다크 모드 (Slate 테마) 대응 스타일 --- */
+[data-md-color-scheme="slate"] .md-content {
+    background-color: #2e323a; /* 다크 모드용 어두운 배경 */
+    border-color: #404754;
+}
+
+[data-md-color-scheme="slate"] h2 {
+    border-bottom-color: #404754;
+}
+
+[data-md-color-scheme="slate"] table.infobox {
+    background-color: #23262d;
+    border-color: #404754;
+    color: #e0e0e0;
+}
+
+[data-md-color-scheme="slate"] table.infobox td {
+    border-color: #404754;
+}
+
+[data-md-color-scheme="slate"] table.infobox th {
+    border-color: #404754;
+}
+
+[data-md-color-scheme="slate"] table.infobox .label {
+    background-color: #373c47; /* 라벨 영역도 어둡게 */
+    color: #fff;
+}
+
+[data-md-color-scheme="slate"] details {
+    background-color: #23262d;
+    border-color: #404754;
+}
+
+[data-md-color-scheme="slate"] details summary {
+    background-color: #373c47;
+    border-bottom-color: #404754;
+    color: #fff;
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 76.25em) {
+    table.infobox {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}

@@ -53,3 +53,44 @@
 1.  **새 문서 만들기**: `docs/` 폴더 내에 새로운 `.md` 파일을 만듭니다 (예: `docs/new-game.md`).
 2.  **메뉴에 등록**: `mkdocs.yml`의 `nav` 섹션에 파일 경로를 추가합니다.
 3.  **틀 사용**: 위 예시처럼 `<table>` 코드를 복사해서 제목 아래에 넣으면 바로 나무위키 느낌의 정보 박스를 만들 수 있습니다.
+
+
+<hr>
+<div style="background: #2c3e50; color: white; padding: 15px; border-radius: 10px; text-align: center; margin-top: 20px;">
+  <p style="margin: 0; font-size: 0.9em;">Kiwi Wiki</p>
+  <h3 style="margin: 5px 0;">현재까지 <span id="visitor-count" style="color: #ffeb3b; font-size: 1.2em;">0</span>명 방문했습니다!</h3>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+
+<script>
+  //
+  window.onload = function() {
+    //
+    const firebaseConfig = {
+        apiKey: "AIzaSyAPfzO08FQ9_6Ye3U8zWLHnaa_DMDuGxmQ",
+        authDomain: "kiwi-wiki-3e547.firebaseapp.com",
+        databaseURL: "https://kiwi-wiki-3e547-default-rtdb.asia-southeast1.firebasedatabase.app/",
+        projectId: "kiwi-wiki-3e547",
+        storageBucket: "kiwi-wiki-3e547.firebasestorage.app",
+        messagingSenderId: "60692664828",
+        appId: "1:60692664828:web:ea7edaf803ec23992e2279"
+    };
+
+    // Firebase 초기화
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database().ref('visitor_count');
+
+    // 트랜잭션을 사용해 방문자 수 1 증가 
+    db.transaction((current) => {
+      return (current || 0) + 1;
+    });
+
+    // 실시간으로 데이터 변화 감지 (모든 사용자 화면에 즉시 반영)
+    db.on('value', (snapshot) => {
+      const count = snapshot.val();
+      document.getElementById('visitor-count').innerText = count;
+    });
+  };
+</script>

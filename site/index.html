@@ -47,6 +47,8 @@
       
     
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -88,8 +90,7 @@
   <nav class="md-header__inner md-grid" aria-label="상단/헤더">
     <a href="." title="Kiwi Wiki" class="md-header__button md-logo" aria-label="Kiwi Wiki" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -282,8 +283,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="." title="Kiwi Wiki" class="md-nav__button md-logo" aria-label="Kiwi Wiki" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/logo.svg" alt="logo">
 
     </a>
     Kiwi Wiki
@@ -376,6 +376,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🛠️ 주요 사용 기술">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 팁: 새로운 요소를 추가하려면?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -487,6 +504,23 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="🛠️ 주요 사용 기술">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 팁: 새로운 요소를 추가하려면?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -507,21 +541,98 @@
 
 
 <h1 id="kiwi-wiki">🥝 Kiwi Wiki: 게임 프로젝트 위키</h1>
-<p>환영합니다! 이 사이트는 제가 개발한 <strong>두 가지 게임 프로젝트</strong>와 그 과정에서 사용된 <strong>기술 스택</strong>을 소개하는 공간입니다.</p>
+<table class="infobox">
+  <tr>
+    <th colspan="2">🥝 Kiwi Wiki 운영 정보</th>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align: center; background-color: white;">
+      <span style="font-size: 50px;">🥝</span><br>
+      <strong>프로젝트 마스코트: 키위</strong>
+    </td>
+  </tr>
+  <tr>
+    <td class="label">운영자</td>
+    <td>사용자 (User)</td>
+  </tr>
+  <tr>
+    <td class="label">사이트 주소</td>
+    <td><a href="https://example.com">kiwi-wiki.io</a></td>
+  </tr>
+  <tr>
+    <td class="label">최근 수정</td>
+    <td>2026-02-21</td>
+  </tr>
+</table>
+
+<p>환영합니다! 이 사이트는 저희가 개발한 <strong>두 가지 게임 프로젝트</strong>와 그 과정에서 사용된 <strong>기술 스택</strong>을 소개하는 공간입니다.</p>
 <h2 id="_1">🎮 소개할 게임 목록</h2>
+<details class="info" open="open">
+<summary>게임 목록 확인하기 (접기)</summary>
 <p>현재 다음 두 가지 프로젝트가 등록되어 있습니다.</p>
 <ul>
 <li><strong>AlloutFPS</strong>: 격렬한 액션을 담은 1인칭 슈팅 게임</li>
 <li><strong>[두 번째 게임 이름]</strong>: (정보를 입력해 주세요!)</li>
 </ul>
+</details>
 <h2 id="_2">🛠️ 주요 사용 기술</h2>
 <p>각 프로젝트는 다양한 최신 기술을 활용하여 제작되었습니다.</p>
+<details class="abstract">
+<summary>사용 기술 상세 정보 (접기)</summary>
 <ul>
 <li><strong>게임 엔진</strong>: Unity, Unreal Engine 등</li>
 <li><strong>프로그래밍 언어</strong>: C#, C++, Python 등</li>
 <li><strong>그래픽 및 도구</strong>: Blender, Adobe Suite 등</li>
 </ul>
+</details>
 <p>자세한 내용은 상단 메뉴의 <strong>게임목록</strong>과 <strong>사용기술</strong> 탭에서 확인하실 수 있습니다.</p>
+<hr />
+<h3 id="_3">💡 팁: 새로운 요소를 추가하려면?</h3>
+<p>질문하신 대로 <strong>새로운 요소를 추가할 때는 <code>.md</code> 파일을 추가하는 것이 가장 좋습니다.</strong> </p>
+<ol>
+<li><strong>새 문서 만들기</strong>: <code>docs/</code> 폴더 내에 새로운 <code>.md</code> 파일을 만듭니다 (예: <code>docs/new-game.md</code>).</li>
+<li><strong>메뉴에 등록</strong>: <code>mkdocs.yml</code>의 <code>nav</code> 섹션에 파일 경로를 추가합니다.</li>
+<li><strong>틀 사용</strong>: 위 예시처럼 <code>&lt;table&gt;</code> 코드를 복사해서 제목 아래에 넣으면 바로 나무위키 느낌의 정보 박스를 만들 수 있습니다.</li>
+</ol>
+<hr>
+<div style="background: #2c3e50; color: white; padding: 15px; border-radius: 10px; text-align: center; margin-top: 20px;">
+  <p style="margin: 0; font-size: 0.9em;">Project: Network Programming</p>
+  <h3 style="margin: 5px 0;">현재까지 <span id="visitor-count" style="color: #ffeb3b; font-size: 1.2em;">0</span>명이 방문했습니다!</h3>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database-compat.js"></script>
+
+<script>
+  // 지연 로딩을 위해 윈도우 로드 후 실행
+  window.onload = function() {
+    // 여기에 1단계에서 복사한 firebaseConfig를 붙여넣으세요!
+    const firebaseConfig = {
+        apiKey: "AIzaSyAPfzO08FQ9_6Ye3U8zWLHnaa_DMDuGxmQ",
+        authDomain: "kiwi-wiki-3e547.firebaseapp.com",
+        databaseURL: "https://kiwi-wiki-3e547-default-rtdb.asia-southeast1.firebasedatabase.app/",
+        projectId: "kiwi-wiki-3e547",
+        storageBucket: "kiwi-wiki-3e547.firebasestorage.app",
+        messagingSenderId: "60692664828",
+        appId: "1:60692664828:web:ea7edaf803ec23992e2279"
+    };
+
+    // Firebase 초기화
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database().ref('visitor_count');
+
+    // 트랜잭션을 사용해 방문자 수 1 증가 (C2S 핵심 로직)
+    db.transaction((current) => {
+      return (current || 0) + 1;
+    });
+
+    // 실시간으로 데이터 변화 감지 (모든 사용자 화면에 즉시 반영)
+    db.on('value', (snapshot) => {
+      const count = snapshot.val();
+      document.getElementById('visitor-count').innerText = count;
+    });
+  };
+</script>
 
 
 

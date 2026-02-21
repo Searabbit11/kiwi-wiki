@@ -2,7 +2,7 @@ site_name: Kiwi Wiki
 theme:
   name: material
   language: ko
-
+  logo: assets/logo.svg
   palette:
     # 라이트 모드 설정
     - media: "(prefers-color-scheme: light)"
@@ -28,6 +28,8 @@ theme:
     text: Noto Sans KR
     code: Fira Code
 
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - pymdownx.details

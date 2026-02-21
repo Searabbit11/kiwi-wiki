@@ -46,7 +46,9 @@ table.infobox td {
 table.infobox .label {
     background-color: #f8f9fa;
     font-weight: bold;
-    width: 30%;
+    width: 35%; /* 너비를 30%에서 35%로 확장 */
+    white-space: nowrap; /* 글자가 절대 줄바꿈되지 않게 설정 */
+    word-break: keep-all;
 }
 
 details {

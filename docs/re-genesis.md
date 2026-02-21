@@ -6,7 +6,7 @@
   </tr>
   <tr>
     <td colspan="2" style="text-align: center; background-color: white; padding: 20px;">
-      <img src="assets/Re-Genesis_Title.png" alt="Re-genesis 타이틀 화면" style="width: 500px; height: auto;"><br>
+      <img src="../assets/Re-Genesis_Title.png" alt="Re-genesis 타이틀 화면" style="width: 500px; height: auto;"><br>
       <strong>"죽어가는 세상의 유전자를 지배할 것인가, 아니면 세상과 함께 숨 쉴 것인가."</strong>
     </td>
   </tr>

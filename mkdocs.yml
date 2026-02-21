@@ -43,4 +43,5 @@ nav:
   - 게임목록:
       - 전체 목록: gameinformation.md
       - AlloutFPS: AlloutFPS.md
+      - Re-Genesis: re-genesis.md
   - 사용기술: description.md

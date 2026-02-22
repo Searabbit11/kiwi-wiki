@@ -3,6 +3,7 @@ theme:
   name: material
   language: ko
   logo: assets/logo.svg
+  favicon: assets/logo.svg
   palette:
     # 라이트 모드 설정
     - media: "(prefers-color-scheme: light)"

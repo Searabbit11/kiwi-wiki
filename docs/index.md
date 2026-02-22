@@ -47,13 +47,59 @@
 
 ---
 
-### 💡 팁: 새로운 요소를 추가하려면?
-질문하신 대로 **새로운 요소를 추가할 때는 `.md` 파일을 추가하는 것이 가장 좋습니다.** 
+<div id="random-tip-container" class="random-tip-box">
+  <h3 id="tip-title">💡 팁을 불러오는 중...</h3>
+  <div id="tip-content" style="line-height: 1.6;">잠시만 기다려 주세요.</div>
+</div>
 
-1.  **새 문서 만들기**: `docs/` 폴더 내에 새로운 `.md` 파일을 만듭니다 (예: `docs/new-game.md`).
-2.  **메뉴에 등록**: `mkdocs.yml`의 `nav` 섹션에 파일 경로를 추가합니다.
-3.  **틀 사용**: 위 예시처럼 `<table>` 코드를 복사해서 제목 아래에 넣으면 바로 나무위키 느낌의 정보 박스를 만들 수 있습니다.
+<script>
+  (function() {
+    const tips = [
+      {
+        title: "💡 팁: 새로운 요소를 추가하려면?",
+        content: "<code>docs/</code> 폴더 내에 새로운 <code>.md</code> 파일을 만들고 <code>mkdocs.yml</code>의 <code>nav</code> 섹션에 경로를 추가하세요. 나무위키 스타일의 인포박스 틀을 복사해서 쓰면 더 깔끔합니다!"
+      },
+      {
+        title: "💡 팁: 키위색 글자를 클릭해봐요!",
+        content: "본문의 <b>키위색 글자</b>는 관련 문서나 외부 사이트로 연결된 하이퍼링크입니다. 궁금한 용어는 주저 말고 클릭해 보세요!"
+      },
+      {
+        title: "💡 팁: VATS 활용하기 (AlloutFPS)",
+        content: "전투 중 <code>V</code>키를 눌러 <b>V.A.T.S.</b>를 활성화하세요. 적과의 거리와 엄폐 여부를 계산해 최적의 사격 각도를 제공합니다."
+      },
+      {
+        title: "💡 팁: 스마트폰 인벤토리",
+        content: "<code>TAB</code>키를 누르면 생존에 필요한 모든 기능을 담은 <b>통합 스마트폰</b>이 열립니다. 퀘스트, 지도, 인벤토리를 한눈에 확인하세요."
+      },
+      {
+        title: "💡 팁: 1인칭/3인칭 시점 전환",
+        content: "프로젝트는 1인칭과 3인칭을 모두 지원합니다. <code>LeftAlt</code>를 눌러 카메라를 회전시키면 주변 상황을 더 넓게 파악할 수 있습니다."
+      },
+      {
+        title: "💡 팁: 생체 연성 (RE-GENESIS)",
+        content: "RE-GENESIS에서는 단순한 기계가 아닌 <b>변이체의 유전자</b>를 활용한 '생체 기계'를 연성하여 오염된 땅을 정화해야 합니다."
+      },
+      {
+        title: "💡 팁: 문서 검색 활용",
+        content: "상단의 검색창(<code>Ctrl+F</code> 또는 아이콘 클릭)을 사용하면 원하는 게임이나 기술 정보를 즉시 찾을 수 있습니다."
+      }
+    ];
 
+    function showRandomTip() {
+      const randomIndex = Math.floor(Math.random() * tips.length);
+      const tip = tips[randomIndex];
+      document.getElementById('tip-title').innerHTML = tip.title;
+      document.getElementById('tip-content').innerHTML = tip.content;
+    }
+
+    // 초기 실행
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', showRandomTip);
+    } else {
+      showRandomTip();
+    }
+  })();
+</script>
 
 <hr>
 <div style="background: #2c3e50; color: white; padding: 15px; border-radius: 10px; text-align: center; margin-top: 20px;">

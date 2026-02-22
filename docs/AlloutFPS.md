@@ -19,11 +19,11 @@
   </tr>
   <tr>
     <td class="label">모티브</td>
-    <td><a href="https://namu.wiki/w/%ED%8poly%EC%95%84%EC%9B%83%20%EC%8B%9C%EB%A6%AC%EC%A6%88" target="_blank">Fallout 시리즈</a></td>
+    <td><a href="https://namu.wiki/w/%ED%8F%B4%EC%95%84%EC%9B%83%20%EC%8B%9C%EB%A6%AC%EC%A6%88" target="_blank">Fallout 시리즈</a></td>
   </tr>
   <tr>
     <td class="label">엔진</td>
-    <td>Unity</td>
+    <td><a href="../../unity/">Unity</a></td>
   </tr>
   <tr>
     <td class="label">그래픽 API</td>
@@ -137,4 +137,4 @@
     *   [사용기술](../description.md)
 
 ---
-[분류: FPS 게임] [분류: 포스트 아포칼립스]
+[분류: FPS 게임] [분류: 포스트 아포칼립스] [검색어: 올아웃]

@@ -116,3 +116,32 @@ details summary {
         margin-left: 0;
     }
 }
+
+/* --- 랜덤 팁 박스 스타일 --- */
+.random-tip-box {
+    background-color: #f1f3f5;
+    border-left: 5px solid #00a495;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    color: #333;
+}
+
+.random-tip-box h3 {
+    margin-top: 0;
+    color: #00a495;
+    font-size: 1.2em !important;
+}
+
+/* 다크 모드 대응 */
+[data-md-color-scheme="slate"] .random-tip-box {
+    background-color: #23262d;
+    border-color: #00a495;
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+[data-md-color-scheme="slate"] .random-tip-box h3 {
+    color: #00d1c1;
+}

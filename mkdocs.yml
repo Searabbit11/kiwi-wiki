@@ -28,12 +28,16 @@ theme:
     text: Noto Sans KR
     code: Fira Code
 
+extra_javascript:
+  - javascripts/custom.js
+
 extra_css:
   - stylesheets/extra.css
 
 markdown_extensions:
   - pymdownx.details
   - attr_list
+  - md_in_html
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
@@ -44,4 +48,6 @@ nav:
       - 전체 목록: gameinformation.md
       - AlloutFPS: AlloutFPS.md
       - Re-Genesis: re-genesis.md
-  - 사용기술: description.md
+  - 사용기술:
+      - 기술 목록: description.md
+      - Unity Engine: unity.md

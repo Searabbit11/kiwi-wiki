@@ -108,7 +108,7 @@
 <hr>
 <div style="background: #2c3e50; color: white; padding: 15px; border-radius: 10px; text-align: center; margin-top: 20px;">
   <p style="margin: 0; font-size: 0.9em;">Kiwi Wiki</p>
-  <h3 style="margin: 5px 0;">현재까지 <span id="visitor-count" style="color: #ffeb3b; font-size: 1.2em;">0</span>명 방문했습니다!</h3>
+  <h3 style="margin: 5px 0;">오늘 <span id="visitor-count" style="color: #ffeb3b; font-size: 1.2em;">0</span>명 방문했습니다!</h3>
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
@@ -130,17 +130,27 @@
 
     // Firebase 초기화
     firebase.initializeApp(firebaseConfig);
-    const db = firebase.database().ref('visitor_count');
+    
+    // 오늘 날짜 가져오기 (YYYY-MM-DD 형식)
+    const today = new Date().toISOString().split('T')[0];
+    const db = firebase.database().ref('daily_visitor_count/' + today);
 
-    // 트랜잭션을 사용해 방문자 수 1 증가 
-    db.transaction((current) => {
-      return (current || 0) + 1;
-    });
+    // 중복 카운트 방지: 로컬 스토리지를 확인하여 오늘 처음 방문인지 판별
+    const lastVisit = localStorage.getItem('last_visit_date');
+
+    if (lastVisit !== today) {
+      // 오늘 처음 방문한 경우에만 카운트 1 증가
+      db.transaction((current) => {
+        return (current || 0) + 1;
+      });
+      // 방문 날짜 저장
+      localStorage.setItem('last_visit_date', today);
+    }
 
     // 실시간으로 데이터 변화 감지 (모든 사용자 화면에 즉시 반영)
     db.on('value', (snapshot) => {
       const count = snapshot.val();
-      document.getElementById('visitor-count').innerText = count;
+      document.getElementById('visitor-count').innerText = count || 0;
     });
   };
 </script>

@@ -12,7 +12,7 @@
   </tr>
   <tr>
     <td class="label">운영자</td>
-    <td>사용자 (User)</td>
+    <td>유스티아누스/원</td>
   </tr>
   <tr>
     <td class="label">사이트 주소</td>
@@ -20,7 +20,7 @@
   </tr>
   <tr>
     <td class="label">최근 수정</td>
-    <td>2026-02-21</td>
+    <td id="last-modified">불러오는 중...</td>
   </tr>
 </table>
 

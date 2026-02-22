@@ -1,22 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // 1. 최근 수정 날짜 자동 업데이트 (홈 화면 인포박스용)
+    const lastModifiedElement = document.getElementById('last-modified');
+    if (lastModifiedElement) {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        lastModifiedElement.innerText = `${year}-${month}-${day}`;
+    }
+
+    // 2. 검색창 나무위키 연동 시스템
     const searchInput = document.querySelector('.md-search__input');
     if (!searchInput) return;
 
     const resultList = document.querySelector('.md-search-result__list');
     const resultMeta = document.querySelector('.md-search-result__meta');
 
-    // 검색 결과창을 감시하는 옵저버 설정
     const observer = new MutationObserver(function() {
         const query = searchInput.value;
         if (query.length > 0) {
-            // "결과 없음" 텍스트가 포함되어 있는지 확인하거나 결과 리스트가 비어있는지 확인
-            const noResults = resultMeta.textContent.includes("없습니다") || 
-                              resultMeta.textContent.includes("none") ||
-                              resultList.children.length === 0;
+            const noResults = resultMeta && (resultMeta.textContent.includes("없습니다") || 
+                              resultMeta.textContent.includes("none")) ||
+                              (resultList && resultList.children.length === 0);
             
             let externalLink = document.getElementById('namu-search-link');
             
-            if (noResults) {
+            if (noResults && resultList) {
                 if (!externalLink) {
                     externalLink = document.createElement('div');
                     externalLink.id = 'namu-search-link';
@@ -27,13 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 externalLink.innerHTML = `<a href="https://namu.wiki/w/${encodeURIComponent(query)}" target="_blank" style="color: #00a495; font-weight: bold; text-decoration: underline;">내 위키에 결과가 없나요? 나무위키에서 '${query}' 검색하기 ↗️</a>`;
             } else if (externalLink) {
-                // 결과가 있으면 외부 링크 제거
                 externalLink.remove();
             }
         }
     });
 
-    // 검색 메타 정보나 리스트가 바뀔 때마다 실행
     if (resultMeta) {
         observer.observe(resultMeta, { childList: true, characterData: true, subtree: true });
     }
